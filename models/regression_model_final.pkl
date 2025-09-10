@@ -2,7 +2,7 @@ import os, pickle
 import numpy as np
 
 class PolynomialRegression:
-    def __init__(self, degree=2):
+    def __init__(self, degree=3):   # <-- degree set to 3
         self.degree = degree
         self.theta = None
 
@@ -24,3 +24,5 @@ class PolynomialRegression:
         Xpi = np.hstack([np.ones((Xp.shape[0], 1)), Xp])
         return Xpi @ self.theta
 
+model = PolynomialRegression(degree=3)
+model.fit(X_train, y_train)
