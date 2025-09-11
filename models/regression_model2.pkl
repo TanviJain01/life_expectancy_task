@@ -24,3 +24,9 @@ class PolynomialRegression:
         Xpi = np.hstack([np.ones((Xp.shape[0], 1)), Xp])
         return Xpi @ self.theta
 
+model = PolynomialRegression(degree=2)
+model.fit(X_train, y_train)  
+
+os.makedirs("models", exist_ok=True)
+with open("models/regression_model2.pkl", "wb") as f:
+    pickle.dump(model, f)
