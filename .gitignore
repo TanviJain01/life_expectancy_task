@@ -1,20 +1,12 @@
-
 data/
-
 # Python cache
-__pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
-
-
 .ipynb_checkpoints/
-
 # Virtual environments
 .venv/
 .env/
-
 *.csv
-
-
 !models/
 !models/*.pkl
